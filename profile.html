@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil - HACKING-MD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">HACKING-<span>MD</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <img src="img/default-avatar.png" alt="Avatar" id="header-avatar">
+                    <span class="username">Thomas Tech</span>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="profile.html">Mon profil</a>
+                    <a href="my-topics.html">Mes discussions</a>
+                    <a href="messages.html">Messages <span class="badge">3</span></a>
+                    <a href="notifications.html">Notifications <span class="badge">5</span></a>
+                    <a href="settings.html">Paramètres</a>
+                    <a href="#" id="logout-btn">Déconnexion</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container profile-container">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <img src="img/default-avatar.png" alt="Avatar" id="profile-avatar">
+                <div class="change-avatar">
+                    <label for="avatar-upload" class="btn btn-sm btn-light">Changer</label>
+                    <input type="file" id="avatar-upload" accept="image/*" hidden>
+                </div>
+            </div>
+            <div class="profile-info">
+                <h1>TechUser123</h1>
+                <p class="user-status">En ligne <span class="status-dot online"></span></p>
+                <div class="user-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="discussion-count">25</span>
+                        <span class="stat-label">Discussions</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="response-count">128</span>
+                        <span class="stat-label">Réponses</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="points-count">512</span>
+                        <span class="stat-label">Points</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="helpful-count">42</span>
+                        <span class="stat-label">Solutions utiles</span>
+                    </div>
+                </div>
+                <div class="user-badges">
+                    <span class="badge badge-expert" title="A aidé plus de 50 membres">Expert</span>
+                    <span class="badge badge-helper" title="A fourni plus de 100 réponses">Aide précieuse</span>
+                    <span class="badge badge-active" title="Connecté tous les jours pendant un mois">Membre actif</span>
+                    <span class="badge badge-contributor" title="A contribué à plus de 20 discussions">Contributeur</span>
+                </div>
+                <div class="user-actions">
+                    <button class="btn btn-sm btn-light" id="follow-btn">
+                        <i class="fas fa-user-plus"></i> Suivre
+                    </button>
+                    <button class="btn btn-sm btn-light" id="message-btn">
+                        <i class="fas fa-envelope"></i> Message
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="profile-content">
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="about">À propos</button>
+                <button class="tab-btn" data-tab="topics">Discussions</button>
+                <button class="tab-btn" data-tab="responses">Réponses</button>
+                <button class="tab-btn" data-tab="badges">Badges</button>
+                <button class="tab-btn" data-tab="edit">Modifier le profil</button>
+            </div>
+            
+            <div class="tab-content" id="tab-about">
+                <div class="about-section">
+                    <h3>À propos de moi</h3>
+                    <p>Développeur web passionné avec plus de 5 ans d'expérience en JavaScript, PHP et Python. J'aime partager mes connaissances et aider les autres à résoudre leurs problèmes techniques.</p>
+                </div>
+                
+                <div class="expertise-section">
+                    <h3>Domaines d'expertise</h3>
+                    <div class="expertise-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Sécurité Web</span>
+                    </div>
+                </div>
+                
+                <div class="activity-section">
+                    <h3>Activité récente</h3>
+                    <div class="activity-timeline">
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-comment"></i></div>
+                            <div class="activity-content">
+                                <p><strong>A répondu à</strong> Comment sécuriser mon site WordPress contre les attaques ?</p>
+                                <span class="activity-time">Il y a 2 heures</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-question-circle"></i></div>
+                            <div class="activity-content">
+                                <p><strong>A posé une question</strong> Comment optimiser les performances de mon site React</p>
+                                <span class="activity-time">Il y a 2 jours</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon"><i class="fas fa-thumbs-up"></i></div>
+                            <div class="activity-content">
+                                <p><strong>A reçu un like pour</strong> sa réponse à Erreur lors de l'installation de Python sur Windows</p>
+                                <span class="activity-time">Il y a 3 jours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-section">
+                    <h3>Contact</h3>
+                    <p>Email : <a href="mailto:contact@example.com">contact@example.com</a></p>
+                    <p>Site web : <a href="https://example.com" target="_blank">example.com</a></p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="#" target="_blank" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content hidden" id="tab-topics">
+                <div class="topics-filter">
+                    <div class="search-filter">
+                        <input type="text" placeholder="Rechercher dans mes discussions" id="topic-search">
+                        <button type="button" class="btn btn-sm btn-light"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="sort-filter">
+                        <label for="topic-sort">Trier par:</label>
+                        <select id="topic-sort">
+                            <option value="recent">Plus récents</option>
+                            <option value="popular">Plus populaires</option>
+                            <option value="responses">Plus de réponses</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <h3>Mes discussions <span class="count-badge" id="topic-count">3</span></h3>
+                <div class="user-topics">
+                    <div class="topic-item">
+                        <div class="topic-votes">
+                            <span class="vote-count">12</span>
+                            <span class="vote-label">votes</span>
+                        </div>
+                        <div class="topic-content">
+                            <div class="topic-title">
+                                <a href="topic.html?id=5">Comment optimiser les performances de mon site React</a>
+                            </div>
+                            <div class="topic-excerpt">
+                                <p>J'ai un problème de performance avec mon application React. Les rendus sont lents et j'aimerais savoir quelles sont les meilleures pratiques pour optimiser...</p>
+                            </div>
+                            <div class="topic-meta">
+                                <span class="topic-date"><i class="far fa-calendar-alt"></i> 10 avril 2025</span>
+                                <span class="topic-responses"><i class="far fa-comment"></i> 8 réponses</span>
+                                <span class="topic-views"><i class="far fa-eye"></i> 124 vues</span>
+                                <span class="topic-category">#react #performance</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="topic-item">
+                        <div class="topic-votes">
+                            <span class="vote-count">5</span>
+                            <span class="vote-label">votes</span>
+                        </div>
+                        <div class="topic-content">
+                            <div class="topic-title">
+                                <a href="topic.html?id=8">Problème avec l'authentification OAuth2</a>
+                            </div>
+                            <div class="topic-excerpt">
+                                <p>Je n'arrive pas à configurer correctement OAuth2 pour mon application. J'obtiens une erreur "invalid_request" lors de la redirection...</p>
+                            </div>
+                            <div class="topic-meta">
+                                <span class="topic-date"><i class="far fa-calendar-alt"></i> 5 avril 2025</span>
+                                <span class="topic-responses"><i class="far fa-comment"></i> 3 réponses</span>
+                                <span class="topic-views"><i class="far fa-eye"></i> 78 vues</span>
+                                <span class="topic-category">#authentification #oauth</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="topic-item">
+                        <div class="topic-votes">
+                            <span class="vote-count">9</span>
+                            <span class="vote-label">votes</span>
+                        </div>
+                        <div class="topic-content">
+                            <div class="topic-title">
+                                <a href="topic.html?id=12">Comment configurer un serveur NGINX pour mon application Node.js</a>
+                            </div>
+                            <div class="topic-excerpt">
+                                <p>J'ai besoin d'aide pour configurer correctement NGINX comme proxy inverse pour mon application Node.js. Je souhaite également mettre en place HTTPS...</p>
+                            </div>
+                            <div class="topic-meta">
+                                <span class="topic-date"><i class="far fa-calendar-alt"></i> 28 mars 2025</span>
+                                <span class="topic-responses"><i class="far fa-comment"></i> 5 réponses</span>
+                                <span class="topic-views"><i class="far fa-eye"></i> 103 vues</span>
+                                <span class="topic-category">#nginx #nodejs #serveur</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <button class="btn btn-sm btn-light disabled"><i class="fas fa-chevron-left"></i> Précédent</button>
+                    <span class="page-number active">1</span>
+                    <button class="btn btn-sm btn-light">Suivant <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="tab-content hidden" id="tab-responses">
+                <div class="responses-filter">
+                    <div class="search-filter">
+                        <input type="text" placeholder="Rechercher dans mes réponses" id="response-search">
+                        <button type="button" class="btn btn-sm btn-light"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="sort-filter">
+                        <label for="response-sort">Trier par:</label>
+                        <select id="response-sort">
+                            <option value="recent">Plus récentes</option>
+                            <option value="upvotes">Plus de votes</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <h3>Mes réponses <span class="count-badge" id="response-count">2</span></h3>
+                <div class="user-responses">
+                    <div class="response-item">
+                        <div class="response-votes">
+                            <span class="vote-count">15</span>
+                            <span class="vote-label">votes</span>
+                            <span class="solution-badge"><i class="fas fa-check-circle"></i> Solution</span>
+                        </div>
+                        <div class="response-content">
+                            <div class="response-title">
+                                <a href="topic.html?id=2#response-7">Re: Comment sécuriser mon site WordPress contre les attaques ?</a>
+                            </div>
+                            <div class="response-preview">
+                                <p>Pour sécuriser votre site WordPress, je vous recommande d'utiliser un plugin de sécurité comme Wordfence ou iThemes Security. Ces plugins offrent des fonctionnalités comme la limitation des tentatives de connexion, le scan de malwares, et la protection contre les injections SQL. Voici également d'autres mesures importantes...</p>
+                            </div>
+                            <div class="response-meta">
+                                <span class="response-date"><i class="far fa-calendar-alt"></i> 12 avril 2025</span>
+                                <span class="response-likes"><i class="far fa-thumbs-up"></i> 18 likes</span>
+                                <span class="topic-link">dans <a href="topic.html?id=2">Comment sécuriser mon site WordPress contre les attaques ?</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="response-item">
+                        <div class="response-votes">
+                            <span class="vote-count">7</span>
+                            <span class="vote-label">votes</span>
+                        </div>
+                        <div class="response-content">
+                            <div class="response-title">
+                                <a href="topic.html?id=9#response-23">Re: Erreur lors de l'installation de Python sur Windows</a>
+                            </div>
+                            <div class="response-preview">
+                                <p>Cette erreur est souvent liée aux variables d'environnement. Essayez de vérifier que le chemin vers Python est correctement ajouté à votre PATH. Voici comment procéder : 1) Ouvrez les Propriétés système, 2) Cliquez sur Variables d'environnement, 3) Modifiez la variable PATH pour inclure le dossier d'installation de Python...</p>
+                            </div>
+                            <div class="response-meta">
+                                <span class="response-date"><i class="far fa-calendar-alt"></i> 8 avril 2025</span>
+                                <span class="response-likes"><i class="far fa-thumbs-up"></i> 10 likes</span>
+                                <span class="topic-link">dans <a href="topic.html?id=9">Erreur lors de l'installation de Python sur Windows</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <button class="btn btn-sm btn-light disabled"><i class="fas fa-chevron-left"></i> Précédent</button>
+                    <span class="page-number active">1</span>
+                    <button class="btn btn-sm btn-light">Suivant <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="tab-content hidden" id="tab-badges">
+                <h3>Mes badges</h3>
+                <div class="badges-container">
+                    <div class="badge-card">
+                        <div class="badge-icon expert">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="badge-info">
+                            <h4>Expert</h4>
+                            <p>A aidé plus de 50 membres de la communauté</p>
+                            <span class="badge-date">Obtenu le 15 mars 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card">
+                        <div class="badge-icon helper">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="badge-info">
+                            <h4>Aide précieuse</h4>
+                            <p>A fourni plus de 100 réponses à la communauté</p>
+                            <span class="badge-date">Obtenu le 5 février 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card">
+                        <div class="badge-icon active">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="badge-info">
+                            <h4>Membre actif</h4>
+                            <p>Connecté tous les jours pendant un mois</p>
+                            <span class="badge-date">Obtenu le 20 janvier 2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card">
+                        <div class="badge-icon contributor">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <div class="badge-info">
+                            <h4>Contributeur</h4>
+                            <p>A contribué à plus de 20 discussions</p>
+                            <span class="badge-date">Obtenu le 10 décembre 2024</span>
+                        </div>
+                    </div>
+                    
+                    <div class="badge-card locked">
+                        <div class="badge-icon mentor">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="badge-info">
+                            <h4>Mentor</h4>
+                            <p>A formé et aidé plus de 10 nouveaux membres</p>
+                            <span class="badge-progress">Progression: 6/10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content hidden" id="tab-edit">
+                <div class="alert alert-success" id="profile-update-success" style="display: none;">
+                    <p>Votre profil a été mis à jour avec succès!</p>
+                </div>
+                
+                <h3>Modifier mon profil</h3>
+                <form id="edit-profile-form">
+                    <div class="form-group">
+                        <label for="edit-username">Nom d'utilisateur</label>
+                        <input type="text" id="edit-username" name="edit-username" value="TechUser123">
+                        <span class="error-message" id="edit-username-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-email">Email</label>
+                        <input type="email" id="edit-email" name="edit-email" value="contact@example.com">
+                        <span class="error-message" id="edit-email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-bio">À propos de moi</label>
+                        <textarea id="edit-bio" name="edit-bio" rows="5">Développeur web passionné avec plus de 5 ans d'expérience en JavaScript, PHP et Python. J'aime partager mes connaissances et aider les autres à résoudre leurs problèmes techniques.</textarea>
+                        <small>Maximum 500 caractères</small>
+                        <span class="char-count"><span id="bio-char-count">225</span>/500</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Domaines d'expertise</label>
+                        <div class="expertise-tags editable">
+                            <span class="tag">JavaScript<button type="button" class="remove-tag"><i class="fas fa-times"></i></button></span>
+                            <span class="tag">PHP<button type="button" class="remove-tag"><i class="fas fa-times"></i></button></span>
+                            <span class="tag">Python<button type="button" class="remove-tag"><i class="fas fa-times"></i></button></span>
+                            <span class="tag">MySQL<button type="button" class="remove-tag"><i class="fas fa-times"></i></button></span>
+                            <span class="tag">Sécurité Web<button type="button" class="remove-tag"><i class="fas fa-times"></i></button></span>
+                            <input type="text" id="add-expertise" placeholder="Ajouter une expertise...">
+                        </div>
+                        <small>Maximum 10 tags</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-website">Site web</label>
+                        <input type="url" id="edit-website" name="edit-website" value="https://example.com">
+                    </div>
+                    
+                    <h4>Liens sociaux</h4>
+                    <div class="form-group social-links-edit">
+                        <div class="social-link-input">
+                            <label><i class="fab fa-github"></i> GitHub</label>
+                            <input type="url" name="social-github" placeholder="https://github.com/username">
+                        </div>
+                        <div class="social-link-input">
+                            <label><i class="fab fa-linkedin"></i> LinkedIn</label>
+                            <input type="url" name="social-linkedin" placeholder="https://linkedin.com/in/username">
+                        </div>
+                        <div class="social-link-input">
+                            <label><i class="fab fa-twitter"></i> Twitter</label>
+                            <input type="url" name="social-twitter" placeholder="https://twitter.com/username">
+                        </div>
+                        <div class="social-link-input">
+                            <label><i class="fab fa-stack-overflow"></i> Stack Overflow</label>
+                            <input type="url" name="social-stackoverflow" placeholder="https://stackoverflow.com/users/id">
+                        </div>
+                    </div>
+                    
+                    <h4>Préférences</h4>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="pref-email-notifications" name="pref-email-notifications" checked>
+                        <label for="pref-email-notifications">Recevoir des notifications par email</label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="pref-show-email" name="pref-show-email" checked>
+                        <label for="pref-show-email">Afficher mon email sur mon profil public</label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="pref-show-online" name="pref-show-online" checked>
+                        <label for="pref-show-online">Afficher mon statut en ligne</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+                </form>
+                
+                <div class="change-password-section">
+                    <h3>Modifier le mot de passe</h3>
+                    <form id="change-password-form">
+                        <div class="form-group">
+                            <label for="current-password">Mot de passe actuel</label>
+                            <input type="password" id="current-password" name="current-password" required>
+                            <span class="error-message" id="current-password-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="new-password">Nouveau mot de passe</label>
+                            <div class="password-input-container">
+                                <input type="password" id="new-password" name="new-password" required>
+                                <button type="button" class="toggle-password" aria-label="Afficher le mot de passe">
+                                    <i class="fa fa-eye"></i>
+                                </button>
+                            </div>
+                            <span class="error-message" id="new-password-error"></span>
+                            <div class="password-strength">
+                                <div class="strength-meter">
+                                    <div class="strength-meter-fill" id="new-strength-meter-fill"></div>
+                                </div>
+                                <span id="new-password-strength-text">Force: Faible</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-new-password">Confirmer le nouveau mot de passe</label>
+                            <input type="password" id="confirm-new-password" name="confirm-new-password" required>
+                            <span class="error-message" id="confirm-new-password-error"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Changer le mot de passe</button>
+                    </form>
+                </div>
+                
+                <div class="danger-zone">
+                    <h3>Zone de danger</h3>
+                    <div class="danger-action">
+                        <div class="danger-info">
+                            <h4>Désactiver mon compte</h4>
+                            <p>Votre compte sera désactivé et vos données seront masquées, mais conservées. Vous pourrez réactiver votre compte à tout moment.</p>
+                        </div>
+                        <button type="button" class="btn btn-warning" id="deactivate-account-btn">Désactiver</button>
+                    </div>
+                    <div class="danger-action">
+                        <div class="danger-info">
+                            <h4>Supprimer mon compte</h4>
+                            <p>Votre compte et toutes vos données seront définitivement supprimés. Cette action est irréversible.</p>
+                        </div>
+                        <button type="button" class="btn btn-danger" id="delete-account-btn">Supprimer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Modal de confirmation pour la suppression de compte -->
+    <div class="modal" id="delete-account-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Supprimer votre compte</h3>
+                <button type="button" class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="warning-text">Êtes-vous sûr de vouloir supprimer définitivement votre compte ? Cette action est irréversible et toutes vos données seront perdues.</p>
+                <form id="confirm-delete-form">
+                    <div class="form-group">
+                        <label for="delete-password">Entrez votre mot de passe pour confirmer</label>
+                        <input type="password" id="delete-password" name="delete-password" required>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="confirm-delete" name="confirm-delete" required>
+                        <label for="confirm-delete">Je comprends que cette action est irréversible</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" id="cancel-delete-btn">Annuler</button>
+                <button type="button" class="btn btn-danger" id="confirm-delete-btn">Supprimer définitivement</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>À propos</h3>
+                    <p>HACKING-MD est une plateforme d'entraide où les utilisateurs peuvent discuter de leurs problèmes et recevoir de l'aide de la communauté.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="categories.html">Catégories</a></li>
+                        <li><a href="rules.html">Règles de la communauté</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: contact@hacking-md.com</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 HACKING-MD. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/profile.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
