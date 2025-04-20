@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveau sujet - HACKING-MD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">HACKING-<span>MD</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="user-avatar">
+                    <img src="img/default-avatar.png" alt="Avatar">
+                    <span class="username">TechUser123</span>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="profile.html">Mon profil</a>
+                    <a href="my-topics.html">Mes discussions</a>
+                    <a href="messages.html">Messages</a>
+                    <a href="settings.html">Paramètres</a>
+                    <a href="#" id="logout-btn">Déconnexion</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="page-header">
+            <h1>Créer une nouvelle discussion</h1>
+            <p>Partagez votre problème avec la communauté</p>
+        </div>
+        
+        <div class="new-topic-form">
+            <form id="create-topic-form">
+                <div class="form-group">
+                    <label for="topic-title">Titre de la discussion</label>
+                    <input type="text" id="topic-title" name="topic-title" placeholder="Soyez précis et concis" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="topic-category">Catégorie</label>
+                    <select id="topic-category" name="topic-category" required>
+                        <option value="">Sélectionnez une catégorie</option>
+                        <option value="technique">Problème technique</option>
+                        <option value="programmation">Programmation</option>
+                        <option value="securite">Sécurité</option>
+                        <option value="reseau">Réseau</option>
+                        <option value="web">Développement web</option>
+                        <option value="mobile">Développement mobile</option>
+                        <option value="database">Bases de données</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="topic-tags">Tags (séparés par des virgules)</label>
+                    <input type="text" id="topic-tags" name="topic-tags" placeholder="ex: javascript, react, api">
+                    <small>Les tags aident les autres membres à trouver votre discussion</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="topic-content">Description du problème</label>
+                    <div class="editor-toolbar">
+                        <button type="button" class="toolbar-btn" data-format="bold"><strong>B</strong></button>
+                        <button type="button" class="toolbar-btn" data-format="italic"><em>I</em></button>
+                        <button type="button" class="toolbar-btn" data-format="code">Code</button>
+                        <button type="button" class="toolbar-btn" data-format="link">Lien</button>
+                        <button type="button" class="toolbar-btn" data-format="list">Liste</button>
+                    </div>
+                    <textarea id="topic-content" name="topic-content" rows="10" placeholder="Décrivez votre problème en détail. Incluez ce que vous avez déjà essayé et les erreurs que vous avez rencontrées." required></textarea>
+                    <div class="editor-tips">
+                        <p><strong>Conseils pour une bonne description :</strong></p>
+                        <ul>
+                            <li>Soyez précis sur ce que vous essayez d'accomplir</li>
+                            <li>Partagez les erreurs exactes que vous rencontrez</li>
+                            <li>Mentionnez les solutions que vous avez déjà essayées</li>
+                            <li>Utilisez la mise en forme (code, listes) pour une meilleure lisibilité</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="topic-attachments">Pièces jointes (optionnel)</label>
+                    <input type="file" id="topic-attachments" name="topic-attachments" multiple>
+                    <small>Vous pouvez ajouter des captures d'écran ou des fichiers pertinents (max 5 Mo par fichier)</small>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Publier la discussion</button>
+                    <button type="button" class="btn btn-light" id="preview-btn">Prévisualiser</button>
+                    <button type="button" class="btn btn-light" id="save-draft-btn">Enregistrer comme brouillon</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>À propos</h3>
+                    <p>HACKING-MD est une plateforme d'entraide où les utilisateurs peuvent discuter de leurs problèmes et recevoir de l'aide de la communauté.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="categories.html">Catégories</a></li>
+                        <li><a href="rules.html">Règles de la communauté</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: contact@hacking-md.com</p>
+                    <p>Suivez-nous sur les réseaux sociaux</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 HACKING-MD. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/editor.js"></script>
+    <script src="js/new-topic.js"></script>
+</body>
+</html>
